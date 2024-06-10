@@ -24,4 +24,4 @@ EXPOSE 8000
 HEALTHCHECK CMD curl --fail http://localhost:8000/_stcore/health || exit 1
 
 # Entry point to run the Streamlit app on port 8000
-ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=8000", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8000", "--server.address=0.0.0.0"]
