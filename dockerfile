@@ -1,7 +1,9 @@
-FROM python:3.9-slim
+FROM python:3.10-slim
 
 # Set the working directory inside the container
 WORKDIR /app
+
+RUN pip install --upgrade pip
 
 # Install necessary packages
 RUN apt-get update && apt-get install -y \
